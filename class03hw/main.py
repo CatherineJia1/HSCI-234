@@ -10,7 +10,7 @@ random_a1 = p5.random(120,200)
 
 random_x2 = p5.random(300)
 random_y2 = p5.random(300)
-random_a2 = p5.random(200,300)
+random_a2 = p5.random(200,300) 
 
 def setup():
     p5.createCanvas(300, 300)    # 300 x 300 pixel canvas 
@@ -34,11 +34,11 @@ def draw_eyes_left():   # draw eyes
     p5.stroke(0)
 
 
-    p5.fill(1,1,1)
+    p5.fill(1,1,1) #eye ball
     p5.arc(-5,14, 12, 40, p5.radians(150), p5.radians(30))
     p5.arc(-5,14, 12, 12, p5.radians(10), p5.radians(170))
 
-    p5.fill(255,255,255)
+    p5.fill(255,255,255) # draw highlight in eyes that moves with mouse
     p5.ellipse(-7+p5.mouseX/50,0+p5.mouseY/30,4,8)
 
 
@@ -54,11 +54,11 @@ def draw_eyes_right():   # draw eyes
     p5.arc(65,-31, 100, 100, p5.radians(70), p5.radians(105))
     p5.stroke(0)
     
-    p5.fill(1,1,1)
+    p5.fill(1,1,1) #eyeball
     p5.arc(68,14, 14, 40, p5.radians(150), p5.radians(30))
     p5.arc(68,14, 12, 12, p5.radians(10), p5.radians(170))
 
-    p5.fill(255,255,255) # draw highlight in eyes that moves
+    p5.fill(255,255,255) # draw highlight in eyes that moves with mouse
     p5.ellipse(68+p5.mouseX/50,0+p5.mouseY/30,4,8)
 
 
@@ -66,7 +66,7 @@ def draw_eyebrow(x,y,r): # draw eyebrow
     p5.fill(255,255,255,0)
     p5.arc(x,y, 100, 100, p5.radians(-r-90), p5.radians(-90+r))
     
-def draw_mouth(x,y,r,t): # draw eyebrow
+def draw_mouth(x,y,r,t): # draw mouth that is interactive
     p5.fill(255,0,0,30)
     p5.ellipse(x,y,r,t)
     
