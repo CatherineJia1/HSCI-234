@@ -9,7 +9,7 @@ i=0
 
 #try to press a,d,left arrodddãdw and right arrow. 
 #try to press mouse
-#try to hover on the cand vas
+#try to hover on the canvas
 
 
 
