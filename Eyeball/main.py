@@ -3,7 +3,7 @@ a = -40;
 b =-40
 arr = []
 i=0
-
+x=0
 p5 = js.window
 
 def setup():
@@ -98,9 +98,35 @@ def draw():
         for j in range (11):
             draw_small_circle(15+i*30 ,15+j*30)
 
-    if (p5.mouseIsPressed == True):
-        
+    if (p5.mouseIsPressed == True and not [p5.mouseX,p5.mouseY] in arr):
         a=p5.mouseX
         b=p5.mouseY
+        arr.append([a,b])
 
-    draw_closed_orange(p5.parseInt((a-15)/30, 10)*30+30,p5.parseInt((b-15)/30, 10)*30+30)
+    for i in range(len(arr)):
+        if (x%2 == 0):
+            if(p5.parseInt((arr[i][0]-15)/30, 10) % 2 == 1 and p5.parseInt((arr[i][1]-15)/30, 10)%2 == 0):
+                draw_closed_orange(p5.parseInt((arr[i][0]-15)/30, 10)*30+30,p5.parseInt((arr[i][1]-15)/30, 10)*30+30)
+            if(p5.parseInt((arr[i][0]-15)/30, 10) % 2 == 1 and p5.parseInt((arr[i][1]-15)/30, 10)%2 == 1):
+                draw_closed_blue(p5.parseInt((arr[i][0]-15)/30, 10)*30+30,p5.parseInt((arr[i][1]-15)/30, 10)*30+30)
+            if(p5.parseInt((arr[i][0]-15)/30, 10) % 2 == 0 and p5.parseInt((arr[i][1]-15)/30, 10)%2 == 1):
+                draw_closed_orange(p5.parseInt((arr[i][0]-15)/30, 10)*30+30,p5.parseInt((arr[i][1]-15)/30, 10)*30+30)
+            if(p5.parseInt((arr[i][0]-15)/30, 10) % 2 == 0 and p5.parseInt((arr[i][1]-15)/30, 10)%2 == 0):
+                draw_closed_blue(p5.parseInt((arr[i][0]-15)/30, 10)*30+30,p5.parseInt((arr[i][1]-15)/30, 10)*30+30)
+
+
+
+
+    if (p5.mouseIsPressed == True and [p5.mouseX,p5.mouseY] in arr):
+        
+        if(p5.parseInt((arr[i][0]-15)/30, 10) % 2 == 1 and p5.parseInt((arr[i][1]-15)/30, 10)%2 == 0):
+            draw_orange_circle(p5.parseInt((arr[i][0]-15)/30, 10)*30+30,p5.parseInt((arr[i][1]-15)/30, 10)*30+30)
+        if(p5.parseInt((arr[i][0]-15)/30, 10) % 2 == 1 and p5.parseInt((arr[i][1]-15)/30, 10)%2 == 1):
+            draw_blue_circle(p5.parseInt((arr[i][0]-15)/30, 10)*30+30,p5.parseInt((arr[i][1]-15)/30, 10)*30+30)
+        if(p5.parseInt((arr[i][0]-15)/30, 10) % 2 == 0 and p5.parseInt((arr[i][1]-15)/30, 10)%2 == 1):
+            draw_orange_circle(p5.parseInt((arr[i][0]-15)/30, 10)*30+30,p5.parseInt((arr[i][1]-15)/30, 10)*30+30)
+        if(p5.parseInt((arr[i][0]-15)/30, 10) % 2 == 0 and p5.parseInt((arr[i][1]-15)/30, 10)%2 == 0):
+            draw_blue_circle(p5.parseInt((arr[i][0]-15)/30, 10)*30+30,p5.parseInt((arr[i][1]-15)/30, 10)*30+30)
+
+
+
