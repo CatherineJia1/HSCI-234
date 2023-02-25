@@ -7,21 +7,24 @@
     <style>
       body {
         background-color: #efefef;
-
       }
       py-repl {
-
           position: absolute;
           left: 318px;
           top: 8px;
           z-index: 1;
-          width: 0px;
+          width: calc(100% - 325px);
           height: calc(100% - 15px);
       }
       </style>
   </head>
   <body>
     
+    <py-config type="toml">
+        [[fetch]]
+        files = ["./main.py"]
+    </py-config>
+  
     <py-script id="output">
       from pyodide.ffi import create_proxy
       from main import *
@@ -41,6 +44,10 @@
       code = document.getElementById("code")
       var client = new XMLHttpRequest();
       client.open('GET', './main.py');
+      client.onreadystatechange = function() {
+        code.innerHTML = client.responseText;
+      }
+      client.send();
     </script>
     
   </body>
