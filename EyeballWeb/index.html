@@ -8,14 +8,6 @@
       body {
         background-color: #efefef;
       }
-      py-repl {
-          position: absolute;
-          left: 318px;
-          top: 8px;
-          z-index: 1;
-          width: calc(100% - 325px);
-          height: calc(100% - 15px);
-      }
       </style>
   </head>
   <body>
@@ -37,17 +29,9 @@
       run()
     </py-script>
 
-    <py-repl id="code"></py-repl>
-    
     <script>
-      function setup() {}
-      code = document.getElementById("code")
       var client = new XMLHttpRequest();
       client.open('GET', './main.py');
-      client.onreadystatechange = function() {
-        code.innerHTML = client.responseText;
-      }
-      client.send();
     </script>
     
   </body>
