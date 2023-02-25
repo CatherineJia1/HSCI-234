@@ -72,11 +72,11 @@ def draw():
 
 
 
-    for i in range(6):
-        for j in range (6):
+    for i in range(12):
+        for j in range (12):
             draw_orange_circle(-30+i*60,0+j*60)
 
-        for k in range (6):
+        for k in range (12):
             draw_orange_circle(i*60,-30+k*60)
 
 
@@ -84,18 +84,18 @@ def draw():
 
 
 
-    for i in range(6):
-        for j in range (6):
+    for i in range(12):
+        for j in range (12):
             draw_blue_circle(+i*60,+j*60)
             
-        for k in range (6):
+        for k in range (12):
             draw_blue_circle(30+i*60,30+k*60)
            
 
 
 
-    for i in range(11):
-        for j in range (11):
+    for i in range(22):
+        for j in range (22):
             draw_small_circle(15+i*30 ,15+j*30)
 
     if (p5.mouseIsPressed == True and not [p5.mouseX,p5.mouseY] in arr):
