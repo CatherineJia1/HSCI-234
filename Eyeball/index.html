@@ -20,11 +20,6 @@
   </head>
   <body>
     
-    <py-config type="toml">
-        [[fetch]]
-        files = ["./main.py"]
-    </py-config>
-  
     <py-script id="output">
       from pyodide.ffi import create_proxy
       from main import *
