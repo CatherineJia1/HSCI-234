@@ -44,10 +44,6 @@
       code = document.getElementById("code")
       var client = new XMLHttpRequest();
       client.open('GET', './main.py');
-      client.onreadystatechange = function() {
-        code.innerHTML = client.responseText;
-      }
-      client.send();
     </script>
     
   </body>
