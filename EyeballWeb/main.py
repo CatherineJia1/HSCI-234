@@ -7,7 +7,7 @@ x=0
 p5 = js.window
 
 def setup():
-    p5.createCanvas(300, 300)   # 300 x 300 pixel canvas 
+    p5.createCanvas(600, 600)   # 300 x 300 pixel canvas 
 
 def draw_orange_circle(x,y):   # draw face 
     p5.noStroke();
