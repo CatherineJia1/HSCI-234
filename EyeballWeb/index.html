@@ -15,13 +15,28 @@
          justify-content: center;
          align-items: center;
       }
+      .line{
+       width:20%;
+       height: 2px;
+       background-color:#000000;
+      }
+      .row{
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+      }
       </style>
   </head>
   <body>
     <h1> EYEBALL - In 1930s Period</h1>
-    <p> Fast click on those Eyes and interact with them
-   </p>
-    <p> Press R to Restart</p>
+    <div class = "row">
+      <div class = "line"></div>
+      
+        <p> Fast click on those Eyes and interact with them </p>
+         <p> Press R to Restart</p>
+    <div class = "line"></div>
+    </div>
     <py-config type="toml">
         [[fetch]]
         files = ["./main.py"]
