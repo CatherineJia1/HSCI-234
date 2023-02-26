@@ -7,7 +7,7 @@ x=0
 p5 = js.window
 
 def setup():
-    p5.createCanvas(600, 600)   # 300 x 300 pixel canvas 
+    p5.createCanvas(400, 400)   # 300 x 300 pixel canvas 
 
 def draw_orange_circle(x,y):   # draw face 
     p5.noStroke();
@@ -72,11 +72,11 @@ def draw():
 
 
 
-    for i in range(12):
-        for j in range (12):
+    for i in range(8):
+        for j in range (8):
             draw_orange_circle(-30+i*60,0+j*60)
 
-        for k in range (12):
+        for k in range (8):
             draw_orange_circle(i*60,-30+k*60)
 
 
@@ -84,18 +84,18 @@ def draw():
 
 
 
-    for i in range(12):
-        for j in range (12):
+    for i in range(8):
+        for j in range (8):
             draw_blue_circle(+i*60,+j*60)
             
-        for k in range (12):
+        for k in range (8):
             draw_blue_circle(30+i*60,30+k*60)
            
 
 
 
-    for i in range(22):
-        for j in range (22):
+    for i in range(16):
+        for j in range (16):
             draw_small_circle(15+i*30 ,15+j*30)
 
     if (p5.mouseIsPressed == True and not [p5.mouseX,p5.mouseY] in arr):
