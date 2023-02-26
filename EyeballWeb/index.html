@@ -13,7 +13,7 @@
           align-items: center;
       }
       body {
-         background-image:url('bg.jpg');
+
          display: flex;
          flex-direction: column;
          justify-content: center;
@@ -21,7 +21,10 @@
 
       }
     
-        
+      .play{
+         background-image:url('bg.jpg');
+         bbackground-size: cover;
+      } 
     
       .row{
          display: flex;
@@ -54,6 +57,7 @@
 
   </head>
   <body>
+  <div class = "play">
     <h1> BALL's EYE in 1930s </h1>
 
 
@@ -82,10 +86,7 @@
       run()
     </py-script>
     
-    <div class = "row">
-    <h2> Project Statement </h2>
-    <p>blablabla</p>
-    </div>
+
     
     <script>
       function setup() {}
@@ -94,6 +95,11 @@
       client.open('GET', './main.py');
      
     </script>
+    </div>
     
+    <div class = "row">
+    <h2> Project Statement </h2>
+    <p>blablabla</p>
+    </div>
   </body>
 </html>
