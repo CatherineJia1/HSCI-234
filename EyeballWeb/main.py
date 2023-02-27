@@ -107,7 +107,7 @@ def draw():
             arr.remove([a,b])  # removed from the arr, when it is already in the arr. That is another reason I need to do the mapping before.
         else:
              arr.append([a,b]) # add it to the arr when it is not exist. 
-    if (p5.keyIsPressed == True and p5.keyr == 'r'):
+    if (p5.keyIsPressed == True and p5.key == 'r'):
         arr = []
         
     for i in range(len(arr)):  # draw closed eyes based on arr
