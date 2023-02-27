@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <style>
+
+           
+      h1{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 48px;
+      }
+      body {         
+         background-image:url('bg8.jpg');
+         background-size: cover;
+         background-repeat:no-repeat;
+
+
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+      }
+      .line{
+        width : 1px;
+        height:auto;
+      }
+      .play{
+
+      } 
+    
+      .row{
+         position: absolute;
+         top: 800px; left: 40px;
+         display:flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+
+      }
+      .column{
+         display: flex;
+        
+         flex-direction: column;
+
+         align-items: center;
+        
+      }
+      .relative{
+      position: absolute;
+      top: 720px; 
+      align-items: center;
+      justify-content: center;
+      }
+      p{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      py-script{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+    
+      </style>
+
+
+  </head>
+  <body>
+  <div class = "play">
+    <h1> BULL's EYE in 1930s </h1>
+
+
+        <div class = "column">
+        <p> Fast click on those Eyes and interact with them </p>
+        <p> Press R to Restart</p>
+    </div>
+    
+    
+    
+    
+    <py-config type="toml">
+        [[fetch]]
+        files = ["./main.py"]
+    </py-config>
+  
+    <py-script id="output">
+      from pyodide.ffi import create_proxy
+      from main import *
+      
+      def run(*args):
+        draw()
+        p5.requestAnimationFrame(create_proxy(run))
+
+      setup()
+      run()
+    </py-script>
+    
+
+    <script>
+      function setup() {}
+      code = document.getElementById("code")
+      var client = new XMLHttpRequest();
+      client.open('GET', './main.py');
+     
+    </script>
+    </div>
+    
+   
+    </div>
+  </body>
+</html>
