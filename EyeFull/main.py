@@ -56,7 +56,7 @@ def draw_closed_blue(x,y): # draw closed blue eye
     p5.ellipse(x,y,50,50)
     p5.noFill()
     p5.stroke(41,62,78)
-    p5.strokeWeight(5)
+    p5.strokeWeight(10)
     p5.arc(x,y-56,120,120,p5.radians(70), p5.radians(110))
 
 
