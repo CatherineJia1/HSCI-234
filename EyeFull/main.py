@@ -20,7 +20,7 @@ def draw_orange_circle(x,y):   # draw orange eye
     p5.fill(245,227,189)
     p5.ellipse(x,y,30,30)
     p5.fill(196,107,39)
-    p5.ellipse(x+((p5.mouseX-x)/100),y+((p5.mouseY-y)/100),7,7)
+    p5.ellipse(x+((p5.mouseX-x)/100),y+((p5.mouseY-y)/100),14,14)
 
 
 
@@ -46,7 +46,7 @@ def draw_blue_circle(x,y):   # draw blue eye
     p5.fill(29,51,119)
     p5.ellipse(x,y,30,30)
     p5.fill(195,204,218)
-    p5.ellipse(x+((p5.mouseX-x)/120),y+((p5.mouseY-y)/120),7,7)
+    p5.ellipse(x+((p5.mouseX-x)/120),y+((p5.mouseY-y)/120),14,14)
 
 def draw_closed_blue(x,y): # draw closed blue eye
     p5.noStroke();
@@ -65,7 +65,8 @@ def draw_closed_blue(x,y): # draw closed blue eye
 def draw_small_circle(x,y):   # small circle
     p5.noStroke();
     p5.fill(196,107,39)
-    p5.ellipse(x,y,14,14)
+    p5.ellipse(x,y,28,28)
+    
 
 def draw():
     global a,b, arr
@@ -90,7 +91,7 @@ def draw():
 
     for i in range(32):
         for j in range (32):
-            draw_small_circle(60+i*120 ,60+j*120)
+            draw_small_circle(30+i*60 ,30+j*60)
 
 
 
