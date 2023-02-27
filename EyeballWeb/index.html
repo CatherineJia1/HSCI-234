@@ -15,6 +15,7 @@
       body {         
          background-image:url('bg2.jpg');
          background-size: cover;
+         background-repeat:no-repeat;
 
          display: flex;
          flex-direction: column;
@@ -43,6 +44,11 @@
 
          align-items: center;
         
+      }
+      .relative{
+      position: absolute;
+      top: 720px; 
+      align-items: center;
       }
       p{
          display: flex;
@@ -90,7 +96,9 @@
     </py-script>
     
 
-    
+    <div class='relative'>
+      <p>See More</p>
+    </div>
     <script>
       function setup() {}
       code = document.getElementById("code")
