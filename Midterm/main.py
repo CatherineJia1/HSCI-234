@@ -5,10 +5,10 @@ p5 = js.window
 # for the square at top right, it changed the opacity as well as created a loop of square but it is steady
 #for the square at the bottom left, it would change color when the mouse is inside. Also, it create a random loop of sqaure
 #for the square at the bottom right, it is created by using moveto and lineto 
-random_size = p5.random(25, 125) #problem 1
-random_size2= p5.random(25, 125)
-random_size3 = p5.random(25, 125)
-random_size4 = p5.random(25, 125)
+random_size = p5.parseInt(p5.random(25, 125), 10) #problem 1
+random_size2= p5.parseInt(p5.random(25, 125), 10)
+random_size3 = p5.parseInt(p5.random(25, 125), 10)
+random_size4 = p5.parseInt(p5.random(25, 125), 10)
 
 alpha = 0
 
