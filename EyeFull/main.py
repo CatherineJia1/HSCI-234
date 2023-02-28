@@ -65,7 +65,7 @@ def draw_closed_blue(x,y): # draw closed blue eye
 def draw_small_circle(x,y):   # small circle
     p5.noStroke();
     p5.fill(196,107,39)
-    p5.ellipse(x,y,28,28)
+    p5.ellipse(x,y,14,14)
     
 
 def draw():
