@@ -1,3 +1,7 @@
+#press 1, 2, 3 to change to state 1, 2, 3
+#automatically changed to state 2 after stayed in state 1 / state 3 for 3 second 
+# press to change from 2 to 3
+
 import js
 p5 = js.window
 program_time = p5.millis()
