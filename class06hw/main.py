@@ -34,7 +34,7 @@ def draw():
         program_state = 'STATE2'
         program_time = p5.millis()
        
-    if(program_state == 'STATE2'):
+    if(program_state == 'STATE2'): #second State, changing size of circle
         e1 = e1-change
         e2 = e2-change
         e3 = e3-change
@@ -42,14 +42,14 @@ def draw():
             change =-change
         draw_circle()
         
-    if(program_state == 'STATE3'):
+    if(program_state == 'STATE3'):#third State, move the circle
         move_circle()
         draw_circle()
         
     if(program_state == 'STATE1'):
         p5.rect(75,75,150,150)
         
-def move_circle():
+def move_circle(): #how to move circle
     global x,e1,e2,e3,speed
     x = x+speed
     if (x>e3 and x<p5.width-e3):
@@ -58,14 +58,14 @@ def move_circle():
         speed = -speed
 
 
-def draw_circle():
+def draw_circle(): #draw circle
     global x,e1,e2,e3
     p5.ellipse(x,150,e1,e1)
     p5.ellipse(x,150,e2,e2)
     p5.ellipse(x,150,e3,e3) 
     
-def keyPressed(event):
-    global program_state
+def keyPressed(event):#keys 1,2,3 to change state
+    global program_state 
     if(str(p5.key) == '1'):
         program_state = 'STATE1'
     if(str(p5.key) == '2'):
@@ -76,7 +76,7 @@ def keyPressed(event):
 def keyReleased(event):
     pass
 
-def mousePressed(event):
+def mousePressed(event): #press to change state
     global program_time
     global program_state
     program_state = 'STATE3'
