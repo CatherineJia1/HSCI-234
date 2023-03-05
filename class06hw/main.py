@@ -52,7 +52,7 @@ def draw():
 def move_circle():
     global x,e1,e2,e3,speed
     x = x+speed
-    if (x>e3/2 and x<p5.width-e3/2):
+    if (x>e3 and x<p5.width-e3):
         speed = speed
     else:
         speed = -speed
