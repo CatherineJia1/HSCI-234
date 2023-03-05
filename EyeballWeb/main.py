@@ -33,7 +33,7 @@ def draw_closed_orange(x,y):   # draw closed orange eye
     p5.noFill()
     p5.stroke(48,33,12)
     p5.strokeWeight(5)
-    p5.arc(x,y-28,90,90,p5.radians(70), p5.radians(110))
+    p5.arc(x,y-42,90,90,p5.radians(70), p5.radians(110))
 
 
 
@@ -57,7 +57,7 @@ def draw_closed_blue(x,y): # draw closed blue eye
     p5.noFill()
     p5.stroke(41,62,78)
     p5.strokeWeight(5)
-    p5.arc(x,y-28,90,90,p5.radians(70), p5.radians(110))
+    p5.arc(x,y-42,90,90,p5.radians(70), p5.radians(110))
 
 
 
@@ -80,10 +80,10 @@ def draw():
 
     for i in range(12):
         for j in range (12):
-            draw_blue_circle(+i*45,+j*90)
+            draw_blue_circle(+i*90,+j*90)
             
         for k in range (12):
-            draw_blue_circle(45+i*45,45+k*90)
+            draw_blue_circle(45+i*90,45+k*90)
            
 
 
