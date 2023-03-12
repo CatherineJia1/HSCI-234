@@ -87,13 +87,3 @@ def keyPressed(event): #when key is pressed cmove the player and change the stat
         print('move point 10 pixels to the right..')
         player_1.move_player( 0, 10)
         player_1.update("Down")
-
-
-def keyReleased(event):
-    pass
-
-def mousePressed(event):
-    pass
-
-def mouseReleased(event):
-    pass
