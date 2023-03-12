@@ -9,7 +9,9 @@ import js
 p5 = js.window
 speed=0.3
 
-
+def setup():
+    p5.createCanvas(300, 300) 
+    print('finished setup') 
 
 class Player:  
     def __init__(self, x = 100, y = 150, state = "Up"):
@@ -55,9 +57,6 @@ class Player:
 player_1 = Player()
 player_2 = Player(200,150,"Up")
 
-def setup():
-    p5.createCanvas(300, 300) 
-    print('finished setup') 
     
 def draw():
     global speed
