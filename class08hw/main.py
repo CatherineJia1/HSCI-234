@@ -16,7 +16,7 @@ class Player:
         self.y = y  # initialize attribute y 
         self.state = state# initialize attribute state
 
-    def set_point(self, x, y):  #reset position
+    def set_player(self, x, y):  #reset position
         self.x = x  
         self.y = y
 
@@ -32,8 +32,8 @@ class Player:
         if(p5.dist(player_1.x, player_1.y,player_2.x,player_2.y)<60):  #if players are close to each other turn red
             p5.fill(256,0,0)
             if(p5.dist(player_1.x, player_1.y,player_2.x,player_2.y)<50):#if players touched each other, reset
-                player_1.set_point(100,150)
-                player_2.set_point(200,150)
+                player_1.set_player(100,150)
+                player_2.set_player(200,150)
         else:
             p5.noFill()
         p5.push()
@@ -86,4 +86,3 @@ def keyPressed(event): #when key is pressed cmove the player and change the stat
         print('move point 10 pixels to the right..')
         player_1.move_player( 0, 10)
         player_1.update("Down")
-        
