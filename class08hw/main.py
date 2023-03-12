@@ -10,6 +10,7 @@ p5 = js.window
 speed=0.3
 
 
+
 class Player:  
     def __init__(self, x = 100, y = 150, state = "Up"):
         self.x = x  # initialize attribute x 
@@ -54,7 +55,10 @@ class Player:
 player_1 = Player()
 player_2 = Player(200,150,"Up")
 
-
+def setup():
+    p5.createCanvas(300, 300) 
+    print('finished setup') 
+    
 def draw():
     global speed
     p5.background(255)
