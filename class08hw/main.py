@@ -3,8 +3,6 @@
 #press right,left,up,down arrow to control the direction of first player
 
 
-
-
 import js
 p5 = js.window
 speed=0.3
