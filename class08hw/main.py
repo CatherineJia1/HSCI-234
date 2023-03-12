@@ -1,3 +1,4 @@
+
 #if players are close to each other they will became red. 
 #if players are touch each other, the game would reset
 #press right,left,up,down arrow to control the direction of first player
@@ -15,9 +16,10 @@ class Player:
         self.y = y  # initialize attribute y 
         self.state = state# initialize attribute state
 
-    def set_player(self, x, y):  #reset position
+    def set_player(self, x, y, state):  #reset position
         self.x = x  
         self.y = y
+        self.state = state
 
     def move_player(self, distance_x, distance_y):#move player
         self.x += distance_x
@@ -31,8 +33,8 @@ class Player:
         if(p5.dist(player_1.x, player_1.y,player_2.x,player_2.y)<60):  #if players are close to each other turn red
             p5.fill(256,0,0)
             if(p5.dist(player_1.x, player_1.y,player_2.x,player_2.y)<50):#if players touched each other, reset
-                player_1.set_player(100,150)
-                player_2.set_player(200,150)
+                player_1.set_player(100,150,"Up")
+                player_2.set_player(200,150,"Up")
         else:
             p5.noFill()
         p5.push()
