@@ -3,9 +3,6 @@ p5 = js.window
 a = False
 programState = "Scene1"
 
-
-
-
 class Scene:  
     def __init__(self,img,x,y):
         self.img = p5.loadImage(img)
@@ -33,13 +30,6 @@ class Conversation:
         p5.text(self.text, 20, 20)
         p5.pop()
 
-
-
-
-
-
-
-
 class Choice:
     def __init__(self,x,y,text,choice1,choice2):
         self.x = 0
@@ -47,10 +37,6 @@ class Choice:
         self.text = text
         self.choice1 = choice1
         self.choice2 = choice2
-
-
-
-
         
     def draw(self):
         p5.push()
@@ -62,14 +48,12 @@ class Choice:
         p5.text(self.choice1,20,40)
         p5.text(self.choice2,20,60)
         p5.pop()
-
-
-
-
-        
+       
 Scene1 = Scene("guizi.png",0,0)  
 Conversation1 = Conversation(0,250,"You weak up and you found yourself in a closet, and you heard some people are talking")
-Choice1 = Choice(0,250,"[Woman]You are going to stay in the tower forever!","Listen","Get out")
+Choice1 = Choice(0,250,"[Girl]: I want to see those lights","Listen","Get out")
+Choice2 = Choice(0,250,"[Woman: ]You are going to stay in the tower forever!","Listen","Get out")
+Choice3 = Choice(0,250,"You heard a doorslam","Listen","Get out")
 SceneFound = Scene("chuzi.jpg",0,0) 
 Scene2 = Scene("lose.png",0,0)
 Scene3 = Scene("guanguizi.png",0,0)
@@ -91,11 +75,25 @@ def draw():
             if(p5.mouseIsPressed == True and p5.mouseY>370 and p5.mouseY<400):
                 programState = "Scene2"
             if(p5.mouseIsPressed == True and p5.mouseY>330 and p5.mouseY<370):
-                programState = "Scene3"
+                programState = "Scene1-1"
     if(programState == "Scene2"):
         Scene2.draw()
-    if(programState == "Scene3"):
-        Scene3.draw()
+    if(programState == "Scene1-1"):
+        Scene1.draw()
+        Choice2.draw()
+        if(p5.mouseIsPressed == True and p5.mouseY>370 and p5.mouseY<400):
+            programState = "Scene2"
+        if(p5.mouseIsPressed == True and p5.mouseY>330 and p5.mouseY<370):
+            programState = "Scene1-2"
+    if(programState == "Scene1-2"):
+        Scene1.draw()
+        Choice3.draw()
+        if(p5.mouseIsPressed == True and p5.mouseY>370 and p5.mouseY<400):
+            programState = "Scene3"
+        if(p5.mouseIsPressed == True and p5.mouseY>330 and p5.mouseY<370):
+            programState = "Scene2-2"
+    if(programState == "Scene2-2"):
+        Scene2.draw() 
     p5.text('program_state = ' + programState, 10, 20)  
     
 def keyPressed(event):
@@ -103,21 +101,13 @@ def keyPressed(event):
     if(programState == "Scene2"):
         programState = "Scene1"
 
-
-
 def keyReleased(event):
     pass
- 
-
-
 
 def mousePressed(event):
     global a
     a = True
     print(a)
-
-
-
 
 def mouseReleased(event):
     pass
