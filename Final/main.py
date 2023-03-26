@@ -1,7 +1,7 @@
 import js
 p5 = js.window
 a = False
-programState = "Scene1"
+programState = "Scene1-0"
 
 class Scene:  
     def __init__(self,img,x,y):
