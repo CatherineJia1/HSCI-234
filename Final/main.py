@@ -51,16 +51,23 @@ class Choice:
         p5.text(self.choice2,20,60)
         p5.pop()
        
-Scene1 = Scene("guizi.png",0,0)  
-Conversation1 = Conversation(0,250,"You weak up and you found yourself in a closet, and you heard some people are talking")
-Choice1 = Choice(0,250,"[Girl]: I want to see those lights","Listen","Get out")
-Choice2 = Choice(0,250,"[Woman]:You are going to stay in the tower forever!","Listen","Get out")
-Choice3 = Choice(0,250,"You heard a doorslam","Get out","")
+Scene1 = Scene("guizi.png",0,0)
 SceneFound = Scene("chuzi.jpg",0,0) 
 Scene2 = Scene("lose.png",0,0)
 Scene3 = Scene("guanguizi.png",0,0)
 Scene4 = Scene("bankailianzi.jpg",0,0)
 Scene5 = Scene("kailianzi.jpg",0,0)
+SceneRoom1 = Scene("Room1.png",0,0)
+SceneRoom2 = Scene("Room2.png",0,0)
+SceneRoom3 = Scene("Room3.png",0,0)
+SceneRoom4 = Scene("Room4.png",0,0)
+
+Conversation1 = Conversation(0,250,"You weak up and you found yourself in a closet, and you heard some people are talking")
+Choice1 = Choice(0,250,"[Girl]: I want to see those lights","Listen","Get out")
+Choice2 = Choice(0,250,"[Woman]:You are going to stay in the tower forever!","Listen","Get out")
+Choice3 = Choice(0,250,"You heard a doorslam","Get out","")
+
+
 def setup():
     
     p5.createCanvas(600, 400) 
