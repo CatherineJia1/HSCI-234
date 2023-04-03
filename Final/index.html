@@ -11,10 +11,19 @@
       }
     </script>
     <style>
-      body {
-        background-color: #efefef;
-        /*background-color: #aaaaaa;*/
+       body {         
+         background-image:url('star.png');
+         background-size: cover;
+         background-repeat:no-repeat;
+
+
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
       }
+
       
       py-repl {
           position: absolute;
@@ -70,10 +79,9 @@
       /*defaultCanvas0 */
       .p5Canvas
       {
-        position: absolute;
-        left: 10px;
-        top: 45px;
-        float: left;
+         display: flex;
+         justify-content: center;
+         align-items: center;
       }
       .refresh-btn
       {
@@ -142,7 +150,7 @@
       run()
     </py-script>
 
-    <py-repl id="code"></py-repl>
+
     
     <script>
       function setup() {}
@@ -155,15 +163,7 @@
       client.send();
     </script>
 
-    <div class="refresh-btn">
-      <button id="reload-sketch" py-click="reload_sketch()">Refresh Canvas</button>
-    </div>
-    <div class="save-btn">
-      <button id="save-code" py-click="save_code()">Save to Memory</button>
-    </div>
-    <div class="load-btn">
-      <button id="load-code" py-click="load_code()">Load from Memory</button>
-    </div>
+    
     
   </body>
 </html>
