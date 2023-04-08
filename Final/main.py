@@ -4,6 +4,7 @@ p5 = js.window
 a = False
 b=1
 c=0
+sound = None
 password = [0, 0, 0, 0]
 RapunzelState=0
 windowState = 0
@@ -106,10 +107,14 @@ nolight = Scene("nolight.png",0,0)
 def setup():
 
     p5.createCanvas(600, 400) 
-    print('finished setup') 
+    global sound
+    sound = p5.loadSound('Alan Menken - Waiting for the Lights.mp3')
+    print('finish setup') 
+  
+    
     
 def draw():
-    global a,programState,b,c,bstring,cstring,windowState,putChair, gameState, RapunzelState, tableState,starState
+    global a,programState,b,c,bstring,cstring,windowState,putChair, gameState, RapunzelState, tableState,starState, sound
 
     p5.background(255)  
     if(programState =="Scene1-0"):
@@ -140,7 +145,8 @@ def draw():
             #programState = "Scene2-2"
     elif(programState == "Scene2-2"):
         Scene2.draw() 
-        
+    elif(programState != "Scene1-1" and programState != "Scene1-0"and programState != "Scene1-2" and programState != "Scene2-1"):
+            sound.play()
     elif(programState == "Scene1-4"):
         SceneRoom1.draw()
     elif(programState == "Scene3-0"):
