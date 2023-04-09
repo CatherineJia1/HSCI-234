@@ -228,7 +228,8 @@ def draw():
     p5.fill('#F6D3A7'); 
     p5.stroke('#A95E3C'); 
     p5.strokeWeight(2);
-    p5.rect(570, 0, 30, 30);
+    p5.rect(500, 0, 100, 100);
+    p5.noStroke(); 
    # p5.text(str(windowState),10,90)
    # p5.text(str(tableState),30,90)
    # p5.text(str(gameState),50,90)
