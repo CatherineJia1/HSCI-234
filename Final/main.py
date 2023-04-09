@@ -117,7 +117,7 @@ def draw():
     global a,programState,b,c,bstring,cstring,windowState,putChair, gameState, RapunzelState, tableState,starState, sound
 
     p5.background(255)  
-    sound.play()
+
     if(programState =="Scene1-0"):
          Scene1.draw()
          Conversation1.draw()  
@@ -290,7 +290,8 @@ def mousePressed(event):
         b=3
         c=1
         
-        
+    if(programState == "Scene1-0"):
+        sound.play()
             
     if(programState == "Scene3-3"):
         if(p5.mouseX>40 and p5.mouseX<170 and p5.mouseY<388 and p5.mouseY>190):
