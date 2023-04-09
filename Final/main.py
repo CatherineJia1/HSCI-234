@@ -108,7 +108,7 @@ def setup():
 
     p5.createCanvas(600, 400) 
     global sound
-    sound = p5.loadSound('sound.wav')
+    sound = p5.loadSound('sound.ogg')
     print('finish setup') 
   
     
