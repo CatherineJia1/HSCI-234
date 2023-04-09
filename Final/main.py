@@ -117,6 +117,7 @@ def draw():
     global a,programState,b,c,bstring,cstring,windowState,putChair, gameState, RapunzelState, tableState,starState, sound
 
     p5.background(255)  
+    sound.play()
     if(programState =="Scene1-0"):
          Scene1.draw()
          Conversation1.draw()  
@@ -224,7 +225,10 @@ def draw():
    # p5.text('program_state = ' + programState, 10, 20)  
    # p5.text("p5.mouseX = " + str(p5.mouseX), 10, 60)
    # p5.text("p5.mouseY = " + str(p5.mouseY), 10, 80)
-    p5.text('You have '+ myHand.x + " in your hand", 400, 30)
+    p5.fill('#F6D3A7'); 
+    p5.stroke('#A95E3C'); 
+    p5.strokeWeight(2);
+    p5.rect(width - 30, 0, 30, 30);
    # p5.text(str(windowState),10,90)
    # p5.text(str(tableState),30,90)
    # p5.text(str(gameState),50,90)
@@ -240,7 +244,7 @@ def keyReleased(event):
     pass
 
 def mousePressed(event):
-    sound.play()
+
     global b,c,windowState,putChair, gameState, RapunzelState, tableState,starState
     if(p5.mouseY>330 and p5.mouseY<370 and b==1):
         c=c+1
