@@ -284,7 +284,7 @@ def mousePressed(event):
             RapunzelState=0
     if(programState == "Scene1-4" and p5.mouseY>180 and p5.mouseY<220 and p5.mouseX>560 and p5.mouseX<580):
         b=3
-        c=3
+        c=1
         
         
             
