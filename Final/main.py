@@ -13,6 +13,8 @@ putChair = 0
 tableState = 0
 gameState = 0
 starState=0
+img1 = p5.loadImage('chairinhand.png');
+img2 = p5.loadImage('teleinhand.png'); 
 
 class Scene:  
     def __init__(self,img,x,y):
@@ -228,9 +230,12 @@ def draw():
     p5.fill('#F6D3A7'); 
     p5.stroke('#A95E3C'); 
     p5.strokeWeight(4);
-    p5.rect(490, 30, 80, 80);
-    p5.noStroke(); 
-    
+    p5.rect(505, 15, 80, 80);
+    p5.noStroke();
+    if(myHand.x == "Chair"):
+        p5.image(img1, 515, 25)
+    if(myHand.x == "Telescope"):
+        p5.image(img2, 515, 25)
    # p5.text(str(windowState),10,90)
    # p5.text(str(tableState),30,90)
    # p5.text(str(gameState),50,90)
