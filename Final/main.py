@@ -145,8 +145,8 @@ def draw():
             #programState = "Scene2-2"
     elif(programState == "Scene2-2"):
         Scene2.draw() 
-    //if(programState != "Scene1-1" and programState != "Scene1-0"and programState != "Scene1-2" and programState != "Scene2-1"):
-    //        sound.play()
+    if(programState != "Scene1-1" and programState != "Scene1-0"and programState != "Scene1-2" and programState != "Scene2-1"):
+        sound.play()
     elif(programState == "Scene1-4"):
         SceneRoom1.draw()
     elif(programState == "Scene3-0"):
