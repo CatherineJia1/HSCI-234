@@ -251,19 +251,21 @@ def draw():
    # print(myHand.x)
 
 def keyPressed(event):
-    global programState
+    global b,c
+    b=1
+    c=0
+    
     pass
 
 def keyReleased(event):
     pass
 
 def mousePressed(event):
-    if(b==4):
-        b=3
+
     global b,c,windowState,putChair, gameState, RapunzelState, tableState,starState
-    if(p5.mouseY>330 and p5.mouseY<370 and p5.mouseX<100 and b==1):
+    if(p5.mouseY>330 and p5.mouseY<370 and b==1):
         c=c+1
-    if(p5.mouseY>370 and p5.mouseY<400 and p5.mouseX<100 and b==1):
+    if(p5.mouseY>370 and p5.mouseY<400):
         b=2
     if(b == 1 ):
         if (p5.mouseY>180 and p5.mouseY<220 and p5.mouseX>20 and p5.mouseX<40):
@@ -305,7 +307,7 @@ def mousePressed(event):
         b=3
         c=1
         
-    if(programState == "Scene1-0"):
+    if(programState == "Scene1-2"):
         sound.play()
         sound.loop()
             
