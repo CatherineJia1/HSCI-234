@@ -261,9 +261,9 @@ def mousePressed(event):
     if(b==4):
         b=3
     global b,c,windowState,putChair, gameState, RapunzelState, tableState,starState
-    if(p5.mouseY>330 and p5.mouseY<370 and b==1):
+    if(p5.mouseY>330 and p5.mouseY<370 and p5.mouseX<100 and b==1):
         c=c+1
-    if(p5.mouseY>370 and p5.mouseY<400):
+    if(p5.mouseY>370 and p5.mouseY<400 and p5.mouseX<100 and b==1):
         b=2
     if(b == 1 ):
         if (p5.mouseY>180 and p5.mouseY<220 and p5.mouseX>20 and p5.mouseX<40):
