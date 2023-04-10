@@ -92,3 +92,22 @@
         p5_element = Element("defaultCanvas0").element
         code_element.style.left = str(p5_element.clientWidth + 20) + 'px'
         code_element.style.width = f'calc(100% - {p5_element.clientWidth
+      reload_sketch()
+      run()
+    </py-script>
+
+    <py-repl id="code"></py-repl>
+    
+    <script>
+      function setup() {}
+      code = document.getElementById("code")
+      var client = new XMLHttpRequest();
+      client.open('GET', './main.py');
+      client.onreadystatechange = function() {
+        code.innerHTML = client.responseText;
+      }
+      client.send();
+    </script>
+
+  </body>
+</html>
