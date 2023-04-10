@@ -15,7 +15,7 @@ gameState = 0
 starState=0
 img1 = p5.loadImage('chairinhand.png');
 img2 = p5.loadImage('teleinhand.png'); 
-
+img3 = p5.loadImage('lightinhand.png'); 
 class Scene:  
     def __init__(self,img,x,y):
         self.img = p5.loadImage(img)
@@ -176,7 +176,6 @@ def draw():
         SceneRoom2.draw()
         if(myHand.x == "Chair" and putChair == 1):
             Chair.draw()
-            myHand.grab("Empty")
         if(windowState >= 1):
             if(not myHand.x == "Chair"):
                 Conversation2.draw()
@@ -235,9 +234,11 @@ def draw():
     p5.rect(505, 15, 80, 80);
 
     if(myHand.x == "Chair"):
-        p5.image(img1, 515, 25)
+        p5.image(img1, 515, 30)
     if(myHand.x == "Telescope"):
-        p5.image(img2, 515, 25)
+        p5.image(img2, 515, 30)
+    if(myHand.x == "Light"):
+        p5.image(img3,515,30)
     if(myHand.x == "Empty"):
         p5.strokeWeight(4);
         p5.rect(505, 15, 80, 80);
