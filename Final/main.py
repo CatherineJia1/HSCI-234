@@ -258,7 +258,8 @@ def keyReleased(event):
     pass
 
 def mousePressed(event):
-
+    if(b==4):
+        b=3
     global b,c,windowState,putChair, gameState, RapunzelState, tableState,starState
     if(p5.mouseY>330 and p5.mouseY<370 and b==1):
         c=c+1
