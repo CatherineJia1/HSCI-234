@@ -333,6 +333,8 @@ def mousePressed(event):
             
         if(tableState==3 and p5.mouseX>400 and p5.mouseX<500 and p5.mouseY<130 and p5.mouseY>90):
             myHand.grab("Telescope")
+        if(b==4):
+            b==3
 def mouseReleased(event):
     global a
     a = False
