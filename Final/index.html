@@ -15,29 +15,33 @@
       body {
         background-color: #efefef;
         /*background-color: #aaaaaa;*/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
       }
-
+      
+      /* Centered canvas */
       .p5Canvas {
         position: absolute;
-        width: 600px;
-        height: 400px;
-        top: calc(50% - 200px);
-        left: calc(50% - 300px);
-        float: left;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      /* Hide buttons and terminals */
+      .refresh-btn,
+      .save-btn,
+      .load-btn,
+      py-repl,
+      py-terminal {
+        display: none;
       }
     </style>
   </head>
   <body>
+    
     <py-config type="toml">
         [[fetch]]
         files = ["./main.py"]
     </py-config>
-
+  
     <py-script id="output">
       from pyodide.ffi import create_proxy
       from main import *
@@ -72,6 +76,18 @@
       run()
     </py-script>
 
-    <div class="p5Canvas"></div>
+    <py-repl id="code"></py-repl>
+    
+    <script>
+      function setup() {}
+      code = document.getElementById("code")
+      var client = new XMLHttpRequest();
+      client.open('GET', './main.py');
+      client.onreadystatechange = function() {
+        code.innerHTML = client.responseText;
+      }
+      client.send();
+    </script>
+
   </body>
 </html>
