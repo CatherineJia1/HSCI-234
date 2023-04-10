@@ -111,7 +111,7 @@ def setup():
     p5.createCanvas(600, 400) 
     global sound
     sound = p5.loadSound('Alan Menken - Waiting for the Lights.mp3')
-    sound.loop()
+
     print('finish setup') 
   
     
@@ -305,6 +305,7 @@ def mousePressed(event):
         
     if(programState == "Scene1-0"):
         sound.play()
+        sound.loop()
             
     if(programState == "Scene3-3"):
         if(p5.mouseX>40 and p5.mouseX<170 and p5.mouseY<388 and p5.mouseY>190):
