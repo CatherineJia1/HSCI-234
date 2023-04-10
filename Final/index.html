@@ -15,101 +15,29 @@
       body {
         background-color: #efefef;
         /*background-color: #aaaaaa;*/
-      }
-      
-      py-repl {
-          position: absolute;
-          top: 45px;
-          left: 318px;
-          width: calc(100% - 325px);
-          height: calc(100% - 265px);
-          overflow-y: auto;
-          scroll-behavior: smooth;
-          border-width: 2px;
-          border-color: black;
-          background-color: #cccccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
       }
 
-      py-repl.code {
-        border-width: 4px;
-        border-color: black;
-        height: 300px;
-      }
-      /* code area only */
-      .py-repl-box {
-        background-color: #eeeeee;
-      }
-      py-repl::-webkit-scrollbar-track {
-        background: #808080;
-      }
-      py-repl::-webkit-scrollbar-thumb {
-        background: #cccccc; 
-      }
-      py-repl::-webkit-scrollbar {
-        width: 15px;
-      }
-      py-terminal {
+      .p5Canvas {
         position: absolute;
-        left: 0px;
-        top: calc(100% - 215px);
-        width: calc(100%);
-        height: 215px;
-        overflow-y: auto;
-        scroll-behavior: auto;
-        background: black;
-      }
-      py-terminal::-webkit-scrollbar-track {
-        background: #999999;
-      }
-      py-terminal::-webkit-scrollbar-thumb {
-        background: #cccccc; 
-      }
-      py-terminal::-webkit-scrollbar {
-        width: 15px;
-      }
-
-      /*defaultCanvas0 */
-      .p5Canvas
-      {
-        position: absolute;
-        left: 10px;
-        top: 45px;
+        width: 600px;
+        height: 400px;
+        top: calc(50% - 200px);
+        left: calc(50% - 300px);
         float: left;
       }
-      .refresh-btn
-      {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-      }
-      .save-btn
-      {
-        position: absolute;
-        left: 318px;
-        top: 10px;
-      }
-      .load-btn
-      {
-        position: absolute;
-        left: 475px;
-        top: 10px;
-      }
-      .py-error {
-        position: absolute;
-        top: 0px;
-        left: 10px;
-        width: calc(100% - 20px);
-        z-index: 2
-      }
-      </style>
+    </style>
   </head>
   <body>
-    
     <py-config type="toml">
         [[fetch]]
         files = ["./main.py"]
     </py-config>
-  
+
     <py-script id="output">
       from pyodide.ffi import create_proxy
       from main import *
@@ -144,28 +72,6 @@
       run()
     </py-script>
 
-    <py-repl id="code"></py-repl>
-    
-    <script>
-      function setup() {}
-      code = document.getElementById("code")
-      var client = new XMLHttpRequest();
-      client.open('GET', './main.py');
-      client.onreadystatechange = function() {
-        code.innerHTML = client.responseText;
-      }
-      client.send();
-    </script>
-
-    <div class="refresh-btn">
-      <button id="reload-sketch" py-click="reload_sketch()">Refresh Canvas</button>
-    </div>
-    <div class="save-btn">
-      <button id="save-code" py-click="save_code()">Save to Memory</button>
-    </div>
-    <div class="load-btn">
-      <button id="load-code" py-click="load_code()">Load from Memory</button>
-    </div>
-    
+    <div class="p5Canvas"></div>
   </body>
 </html>
