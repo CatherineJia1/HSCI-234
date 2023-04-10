@@ -232,11 +232,15 @@ def draw():
     p5.stroke('#A95E3C'); 
     p5.strokeWeight(4);
     p5.rect(505, 15, 80, 80);
-    p5.noStroke();
+
     if(myHand.x == "Chair"):
         p5.image(img1, 515, 25)
     if(myHand.x == "Telescope"):
         p5.image(img2, 515, 25)
+    if(myHand.x == "Empty")
+        p5.strokeWeight(4);
+        p5.rect(505, 15, 80, 80);
+    p5.noStroke();
    # p5.text(str(windowState),10,90)
    # p5.text(str(tableState),30,90)
    # p5.text(str(gameState),50,90)
