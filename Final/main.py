@@ -111,7 +111,7 @@ def setup():
     p5.createCanvas(600, 400) 
     global sound
     sound = p5.loadSound('Alan Menken - Waiting for the Lights.mp3')
-    Sound.loop();
+    sound.loop()
     print('finish setup') 
   
     
