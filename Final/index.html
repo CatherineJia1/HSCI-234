@@ -16,7 +16,7 @@
         background-color: #efefef;
         /*background-color: #aaaaaa;*/
       }
-
+      
       /* Centered canvas */
       .p5Canvas {
         position: absolute;
@@ -24,7 +24,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
       }
-
+      
       /* Hide buttons and terminals */
       .refresh-btn,
       .save-btn,
@@ -33,36 +33,15 @@
       py-terminal {
         display: none;
       }
-
-      /* Paragraph style */
-      .instructions {
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 600px;
-        text-align: center;
-        font-size: 10pt;
-        font-family: "Comic Sans MS", cursive, sans-serif;
-      }
     </style>
   </head>
   <body>
-
-    <div class="instructions">
-      <p>
-        In this game, you, as prince Eugene came to Rapunzel's tower. Your can make reactions to different events, explore in Rapunzel's tower with a goal of take her to see the Lights.
-      </p>
-      <p>
-        [Instruction]: This game is based on mouse and keyboard. Click to interact with scene, press any key to restart the game. The box on the left right is your tool box, you can only have one thing in the box at a time.
-      </p>
-    </div>
-
+    
     <py-config type="toml">
         [[fetch]]
         files = ["./main.py"]
     </py-config>
-
+  
     <py-script id="output">
       from pyodide.ffi import create_proxy
       from main import *
@@ -91,7 +70,8 @@
         code_element =  Element("code").element
         p5_element = Element("defaultCanvas0").element
         code_element.style.left = str(p5_element.clientWidth + 20) + 'px'
-        code_element.style.width = f'calc(100% - {p5_element.clientWidth
+        code_element.style.width = f'calc(100% - {p5_element.clientWidth + 30}px)'
+      
       reload_sketch()
       run()
     </py-script>
