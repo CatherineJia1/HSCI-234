@@ -175,6 +175,7 @@ def draw():
         SceneRoom2.draw()
         if(myHand.x == "Chair" and putChair == 1):
             Chair.draw()
+            myHand.grab("Empty")
         if(windowState >= 1):
             if(not myHand.x == "Chair"):
                 Conversation2.draw()
