@@ -238,7 +238,7 @@ def draw():
         p5.image(img1, 515, 25)
     if(myHand.x == "Telescope"):
         p5.image(img2, 515, 25)
-    if(myHand.x == "Empty")
+    if(myHand.x == "Empty"):
         p5.strokeWeight(4);
         p5.rect(505, 15, 80, 80);
     p5.noStroke();
