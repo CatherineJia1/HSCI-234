@@ -258,6 +258,7 @@ def keyPressed(event):
     global b,c
     b=1
     c=0
+    myHand.grab("Empty")
     
     pass
 
