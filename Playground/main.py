@@ -52,7 +52,7 @@ player_1 = Player()
 player_2 = Player(200,150,"Up")
 
 def setup():
-    p5.createCanvas(300, 300) 
+    p5.createCanvas(800, 500) 
     print('finished setup') 
     
     
