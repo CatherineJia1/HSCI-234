@@ -21,7 +21,7 @@
           top: 45px;
           left: 318px;
           width: calc(50%);
-          height: calc(50%);
+          height: calc(70%);
           overflow-y: auto;
           scroll-behavior: smooth;
           border-width: 2px;
@@ -122,6 +122,7 @@
         p5.mousePressed = create_proxy(mousePressed) 
         p5.mouseReleased = create_proxy(mouseReleased)
 
+      
       def save_code():
         text = js.document.getElementsByClassName("cm-content")[0].innerText
         localStorage.setItem("code", text)
